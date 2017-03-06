@@ -1,0 +1,4 @@
+{
+    "dbPath": "mongodb://localhost/gameofdrones",
+    "port": 8080
+}

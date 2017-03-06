@@ -1,0 +1,38 @@
+<navbar></navbar>
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div ng-show="$ctrl.$rootScope.startStep">
+          <h2 class="text-center">Enter Players Names`s</h2>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-sm-4" for="player1">Player 1:</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" id="player1" placeholder="Player 1"
+                       ng-model="$ctrl.$rootScope.player1">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-4" for="player2">Player 2:</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" id="player2" placeholder="Player 2"
+                       ng-model="$ctrl.$rootScope.player2">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10 text-center">
+                <button type="submit" class="btn btn-primary" ng-click="$ctrl.start()">Start</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <round class="ng-hide" ng-show="$ctrl.$rootScope.roundStep"></round>
+        <winner class="ng-hide" ng-show="$ctrl.$rootScope.winnerStep"></winner>
+      </div>
+      <div class="col-sm-6">
+        <score></score>
+      </div>
+    </div>
+  </div>
+</main>

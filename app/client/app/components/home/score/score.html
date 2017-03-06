@@ -1,0 +1,11 @@
+<h2>Score</h2>
+<div class="col-sm-6">
+  <h4>Round</h4>
+</div>
+<div class="col-sm-6">
+  <h4>Winner</h4>
+</div>
+<div ng-repeat="model in $ctrl.$rootScope.lastWinners">
+  <p class="col-sm-6">{{model.round}}</p>
+  <p class="col-sm-6">{{model.winner}}</p>
+</div>

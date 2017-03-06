@@ -1,0 +1,11 @@
+<navbar></navbar>
+<main>
+  <div class="container">
+    <h2>Book of records</h2>
+    <ul>
+      <li ng-repeat="model in $ctrl.$rootScope.records">
+        {{model._id}} won {{model.total}} times
+      </li>
+    </ul>
+  </div>
+</main>

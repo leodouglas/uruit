@@ -1,0 +1,15 @@
+<h1 class="text-center">Round {{ $ctrl.$rootScope.round }}</h1>
+<h2 class="text-center">{{ $ctrl.getPlayer() }} </h2>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="select">Select Move:</label>
+    <div class="col-sm-7">
+      <select id="select" class="form-control" ng-model="$ctrl.move">
+        <option ng-repeat="move in $ctrl.$rootScope.validMoves" value="{{move}}">{{move}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group text-center">
+    <button type="submit" class="btn btn-primary" ng-click="$ctrl.play()">Ok</button>
+  </div>
+</form>
